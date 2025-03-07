@@ -1,0 +1,35 @@
+﻿{
+  "Metadata": {
+    "Id": "9e974c70-ed71-49e2-b398-2159ea82d61a",
+    "Kind": "FormIo"
+  },
+  "DesignProperties": {
+    "Title": "NewForm",
+    "Theme": "Default",
+    "ShowInTaskbar": true,
+    "ShowMargin": true,
+    "CustomStyle": ""
+  },
+  "Data": {
+    "components": [
+      {
+        "label": "Number",
+        "tableView": false,
+        "delimiter": false,
+        "requireDecimal": false,
+        "truncateMultipleSpaces": false,
+        "key": "number",
+        "type": "number",
+        "input": true
+      },
+      {
+        "type": "button",
+        "label": "Submit",
+        "key": "submit",
+        "disableOnInvalid": true,
+        "input": true,
+        "tableView": false
+      }
+    ]
+  }
+}
