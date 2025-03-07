@@ -77,9 +77,9 @@
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Learn_Arguments" sap:VirtualizedContainerService.HintSize="1098,582.824" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:Int32" Name="Num1" />
-      <Variable x:TypeArguments="x:Int32" Name="Num2" />
-      <Variable x:TypeArguments="x:Int32" Name="Sum" />
+      <Variable x:TypeArguments="x:Int32" Name="Value1" />
+      <Variable x:TypeArguments="x:Int32" Name="Value2" />
+      <Variable x:TypeArguments="x:Int32" Name="Result" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -91,7 +91,7 @@
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
             <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:Int32">[Num1]</OutArgument>
+              <OutArgument x:TypeArguments="x:Int32">[Value1]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
               <InArgument x:TypeArguments="x:Int32">2</InArgument>
@@ -99,7 +99,7 @@
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
             <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:Int32">[Num2]</OutArgument>
+              <OutArgument x:TypeArguments="x:Int32">[Value2]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
               <InArgument x:TypeArguments="x:Int32">3</InArgument>
@@ -110,11 +110,11 @@
     </ui:MultipleAssign>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Calculator - Invoke Workflow File (Calculator.xaml)" sap:VirtualizedContainerService.HintSize="479,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Calculator.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:Int32" x:Key="in_Num1">[Num1]</InArgument>
-        <OutArgument x:TypeArguments="x:Int32" x:Key="out_Sum">[Sum]</OutArgument>
-        <InArgument x:TypeArguments="x:Int32" x:Key="in_Num2">[Num2]</InArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="in_Num1">[Value1]</InArgument>
+        <OutArgument x:TypeArguments="x:Int32" x:Key="out_Sum">[Result]</OutArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="in_Num2">[Value2]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="479,113" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[Sum.ToString]" />
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="479,113" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[Result.ToString]" />
   </Sequence>
 </Activity>
